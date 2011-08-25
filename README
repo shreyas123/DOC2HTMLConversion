@@ -1,0 +1,26 @@
+== Dependencies or Prerequisites:
+
+To use converter code, there are some prerequisites:
+
+1. Required Gem:
+-------------------
+	mime-types
+        open-uri
+
+2. Required Installations:
+-------------------
+        OpenOffice.org v2.0.3 or higher
+        A Java runtime environment version 1.4 or higher
+        
+== Instructions
+	Install OpenOffice, JVM and download JODConverter from http://www.artofsolving.com/opensource/jodconverter.
+        Start OpenOffice service by following link http://www.artofsolving.com/node/10
+        In upload_controller change line number 27 to the directory where you have stored the downloaded JODConverter. 
+        
+
+== Developers
+Shreyas Agarwal
+
+== Compatibility
+Rails 2.3.x 3.x.x
+Ruby 1.8.7 1.9.x

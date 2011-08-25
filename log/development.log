@@ -1,0 +1,1642 @@
+  [4;36;1mSQL (78.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (15.6ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UploadController#index (for 127.0.0.1 at 2011-03-21 22:56:35) [GET]
+
+ActionController::UnknownAction (No action responded to index. Actions: save_file, upload, and uploadFile):
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UploadController#upload (for 127.0.0.1 at 2011-03-21 22:56:42) [GET]
+Rendering upload/upload
+
+ActionView::TemplateError (undefined method `start_form_tag' for #<ActionView::Base:0x94025d0>) on line #3 of app/views/upload/upload.html.erb:
+1: <h1>File Upload</h1>
+2: <%= start_form_tag ({:action => 'uploadFile'}, 
+3:                         :multipart => true) %>
+4: <p><label for="upload_file">Select File</label> : 
+5: <%= file_field 'upload', 'datafile' %></p>
+6: <%= submit_tag "Upload" %>
+
+    app/views/upload/upload.html.erb:3
+    C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (93.7ms)
+Rendered rescues/_request_and_response (31.2ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UploadController#upload (for 127.0.0.1 at 2011-03-21 22:58:32) [GET]
+Rendering upload/upload
+ERROR: compiling _run_erb_app47views47upload47upload46html46erb RAISED compile error
+E:/converter/app/views/upload/upload.html.erb:3: syntax error, unexpected ')'
+...:multipart => true) do |form|).to_s); @output_buffer.concat ...
+                              ^
+E:/converter/app/views/upload/upload.html.erb:7: syntax error, unexpected kEND
+; @output_buffer.concat(( end ).to_s); @output_buffer.concat "\n"
+                             ^
+E:/converter/app/views/upload/upload.html.erb:9: syntax error, unexpected kENSURE, expecting kEND
+E:/converter/app/views/upload/upload.html.erb:11: syntax error, unexpected $end, expecting ')'
+Function body:           def _run_erb_app47views47upload47upload46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ; @output_buffer.concat "<h1>File Upload</h1>\n"
+; @output_buffer.concat(( form({:action => 'uploadFile'}, 
+                        :multipart => true) do |form|).to_s); @output_buffer.concat "\n<p><label for=\"upload_file\">Select File</label> : \n"
+
+; @output_buffer.concat(( file_field 'upload', 'datafile' ).to_s); @output_buffer.concat "</p>\n"
+; @output_buffer.concat(( submit_tag "Upload" ).to_s); @output_buffer.concat "\n"
+; @output_buffer.concat(( end ).to_s); @output_buffer.concat "\n"
+; @output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: E:/converter/app/views/upload/upload.html.erb:11:in `compile!'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_view/renderable.rb:61:in `compile'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_view/renderable.rb:28:in `render'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_view/template.rb:205:in `render_template'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_view/base.rb:265:in `render'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:1250:in `render_for_file'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:936:in `render_without_benchmark'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:51:in `render'
+C:/Ruby187/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+C:/Ruby187/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+C:/Ruby187/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:51:in `render'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:1326:in `default_render'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:1332:in `perform_action_without_filters'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/filters.rb:617:in `call_filters'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+C:/Ruby187/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+C:/Ruby187/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+C:/Ruby187/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/flash.rb:151:in `perform_action'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:532:in `send'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:532:in `process_without_filters'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/filters.rb:606:in `process'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:391:in `process'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:386:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/routing/route_set.rb:438:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:87:in `dispatch'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:121:in `_call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:130:in `build_middleware_stack'
+C:/Ruby187/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:29:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:29:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+C:/Ruby187/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:9:in `cache'
+C:/Ruby187/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:28:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/string_coercion.rb:25:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/head.rb:9:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/methodoverride.rb:24:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/params_parser.rb:15:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/session/cookie_store.rb:99:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/failsafe.rb:26:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/lock.rb:11:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/lock.rb:11:in `synchronize'
+C:/Ruby187/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/lock.rb:11:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:114:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/reloader.rb:34:in `run'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:108:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/rails-2.3.8/lib/rails/rack/static.rb:31:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/urlmap.rb:47:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/urlmap.rb:41:in `each'
+C:/Ruby187/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/urlmap.rb:41:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/rails-2.3.8/lib/rails/rack/log_tailer.rb:17:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/content_length.rb:13:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/handler/webrick.rb:48:in `service'
+C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+C:/Ruby187/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/handler/webrick.rb:14:in `run'
+C:/Ruby187/lib/ruby/gems/1.8/gems/rails-2.3.8/lib/commands/server.rb:111
+C:/Ruby187/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:29:in `gem_original_require'
+C:/Ruby187/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:29:in `require'
+script/server:3
+
+ActionView::TemplateError (compile error
+E:/converter/app/views/upload/upload.html.erb:3: syntax error, unexpected ')'
+...:multipart => true) do |form|).to_s); @output_buffer.concat ...
+                              ^
+E:/converter/app/views/upload/upload.html.erb:7: syntax error, unexpected kEND
+; @output_buffer.concat(( end ).to_s); @output_buffer.concat "\n"
+                             ^
+E:/converter/app/views/upload/upload.html.erb:9: syntax error, unexpected kENSURE, expecting kEND
+E:/converter/app/views/upload/upload.html.erb:11: syntax error, unexpected $end, expecting ')') on line #3 of app/views/upload/upload.html.erb:
+1: <h1>File Upload</h1>
+2: <%= form({:action => 'uploadFile'}, 
+3:                         :multipart => true) do |form|%>
+4: <p><label for="upload_file">Select File</label> : 
+5: <%= file_field 'upload', 'datafile' %></p>
+6: <%= submit_tag "Upload" %>
+
+    app/views/upload/upload.html.erb:11:in `compile!'
+    C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (93.7ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UploadController#upload (for 127.0.0.1 at 2011-03-21 23:01:02) [GET]
+Rendering upload/upload
+Completed in 16ms (View: 16, DB: 0) | 200 OK [http://localhost/upload/upload]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UploadController#uploadFile (for 127.0.0.1 at 2011-03-21 23:01:09) [POST]
+  Parameters: {"commit"=>"Upload", "upload"=>{"datafile"=>#<File:C:/DOCUME~1/SHREYA~1/LOCALS~1/Temp/RackMultipart20110321-6128-ytmd7l-0>}}
+
+ActionController::InvalidAuthenticityToken (ActionController::InvalidAuthenticityToken):
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (62.5ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (unprocessable_entity)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UploadController#uploadFile (for 127.0.0.1 at 2011-03-21 23:01:53) [POST]
+  Parameters: {"commit"=>"Upload", "upload"=>{"datafile"=>#<File:C:/DOCUME~1/SHREYA~1/LOCALS~1/Temp/RackMultipart20110321-6128-878i9m-0>}}
+
+ActionController::InvalidAuthenticityToken (ActionController::InvalidAuthenticityToken):
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (78.1ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (unprocessable_entity)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UploadController#uploadFile (for 127.0.0.1 at 2011-03-21 23:02:36) [POST]
+  Parameters: {"commit"=>"Upload", "upload"=>{"datafile"=>#<File:C:/DOCUME~1/SHREYA~1/LOCALS~1/Temp/RackMultipart20110321-6128-vwy993-0>}}
+
+Errno::ENOENT (No such file or directory - public/data/Shreyas_Agarwal.doc):
+  app/controllers/upload_controller.rb:18:in `initialize'
+  app/controllers/upload_controller.rb:18:in `open'
+  app/controllers/upload_controller.rb:18:in `save_file'
+  app/controllers/upload_controller.rb:7:in `uploadFile'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (203.1ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UploadController#uploadFile (for 127.0.0.1 at 2011-03-21 23:02:54) [POST]
+  Parameters: {"commit"=>"Upload", "upload"=>{"datafile"=>#<File:C:/DOCUME~1/SHREYA~1/LOCALS~1/Temp/RackMultipart20110321-6128-wcy9st-0>}}
+Completed in 16ms (View: 0, DB: 0) | 200 OK [http://localhost/upload/uploadFile]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UploadController#upload (for 127.0.0.1 at 2011-03-21 23:06:04) [GET]
+Rendering upload/upload
+Completed in 359ms (View: 344, DB: 0) | 200 OK [http://localhost/upload/upload]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UploadController#uploadFile (for 127.0.0.1 at 2011-03-21 23:06:06) [POST]
+  Parameters: {"commit"=>"Upload", "upload"=>{"datafile"=>#<File:C:/DOCUME~1/SHREYA~1/LOCALS~1/Temp/RackMultipart20110321-3248-69ny13-0>}}
+Completed in 39453ms (View: 0, DB: 0) | 200 OK [http://localhost/upload/uploadFile]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UploadController#uploadFile (for 127.0.0.1 at 2011-03-21 23:10:16) [POST]
+  Parameters: {"commit"=>"Upload", "upload"=>{"datafile"=>#<File:C:/DOCUME~1/SHREYA~1/LOCALS~1/Temp/RackMultipart20110321-3248-uax4q8-0>}}
+Completed in 83485ms (View: 0, DB: 0) | 200 OK [http://localhost/upload/uploadFile]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UploadController#uploadFile (for 127.0.0.1 at 2011-03-21 23:12:14) [POST]
+  Parameters: {"commit"=>"Upload", "upload"=>{"datafile"=>#<File:C:/DOCUME~1/SHREYA~1/LOCALS~1/Temp/RackMultipart20110321-3248-rlzc5p-0>}}
+Completed in 2000ms (View: 0, DB: 0) | 200 OK [http://localhost/upload/uploadFile]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UploadController#uploadFile (for 127.0.0.1 at 2011-03-21 23:12:35) [POST]
+  Parameters: {"commit"=>"Upload", "upload"=>{"datafile"=>#<File:C:/DOCUME~1/SHREYA~1/LOCALS~1/Temp/RackMultipart20110321-3248-1q4s9d9-0>}}
+Completed in 10469ms (View: 16, DB: 0) | 200 OK [http://localhost/upload/uploadFile]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (15.6ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UploadController#uploadFile (for 127.0.0.1 at 2011-03-21 23:13:04) [POST]
+  Parameters: {"commit"=>"Upload", "upload"=>{"datafile"=>#<File:C:/DOCUME~1/SHREYA~1/LOCALS~1/Temp/RackMultipart20110321-3248-595io9-0>}}
+Completed in 9359ms (View: 0, DB: 16) | 200 OK [http://localhost/upload/uploadFile]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UploadController#uploadFile (for 127.0.0.1 at 2011-03-21 23:54:28) [POST]
+  Parameters: {"commit"=>"Upload", "upload"=>{"datafile"=>#<File:C:/DOCUME~1/SHREYA~1/LOCALS~1/Temp/RackMultipart20110321-3248-1oz8k5k-0>}}
+Completed in 16ms (View: 0, DB: 0) | 200 OK [http://localhost/upload/uploadFile]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UploadController#uploadFile (for 127.0.0.1 at 2011-03-21 23:54:34) [POST]
+  Parameters: {"commit"=>"Upload", "upload"=>{"datafile"=>#<File:C:/DOCUME~1/SHREYA~1/LOCALS~1/Temp/RackMultipart20110321-3248-c3hzkw-0>}}
+Completed in 16ms (View: 0, DB: 0) | 200 OK [http://localhost/upload/uploadFile]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UploadController#uploadFile (for 127.0.0.1 at 2011-03-21 23:54:39) [POST]
+  Parameters: {"commit"=>"Upload", "upload"=>{"datafile"=>#<File:C:/DOCUME~1/SHREYA~1/LOCALS~1/Temp/RackMultipart20110321-3248-t5mhue-0>}}
+Completed in 16ms (View: 0, DB: 0) | 200 OK [http://localhost/upload/uploadFile]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UploadController#uploadFile (for 127.0.0.1 at 2011-03-21 23:54:47) [POST]
+  Parameters: {"commit"=>"Upload", "upload"=>{"datafile"=>#<File:C:/DOCUME~1/SHREYA~1/LOCALS~1/Temp/RackMultipart20110321-3248-1u8unto-0>}}
+Completed in 1203ms (View: 0, DB: 0) | 200 OK [http://localhost/upload/uploadFile]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UploadController#uploadFile (for 127.0.0.1 at 2011-03-21 23:54:55) [POST]
+  Parameters: {"commit"=>"Upload", "upload"=>{"datafile"=>#<File:C:/DOCUME~1/SHREYA~1/LOCALS~1/Temp/RackMultipart20110321-3248-1p4srwq-0>}}
+Completed in 906ms (View: 0, DB: 0) | 200 OK [http://localhost/upload/uploadFile]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UploadController#uploadFile (for 127.0.0.1 at 2011-03-21 23:54:59) [POST]
+  Parameters: {"commit"=>"Upload", "upload"=>{"datafile"=>#<File:C:/DOCUME~1/SHREYA~1/LOCALS~1/Temp/RackMultipart20110321-3248-1q21mqt-0>}}
+Completed in 1844ms (View: 0, DB: 0) | 200 OK [http://localhost/upload/uploadFile]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UploadController#uploadFile (for 127.0.0.1 at 2011-03-21 23:55:07) [POST]
+  Parameters: {"commit"=>"Upload", "upload"=>{"datafile"=>#<File:C:/DOCUME~1/SHREYA~1/LOCALS~1/Temp/RackMultipart20110321-3248-1uidi9x-0>}}
+Completed in 2531ms (View: 0, DB: 0) | 200 OK [http://localhost/upload/uploadFile]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UploadController#uploadFile (for 127.0.0.1 at 2011-03-21 23:55:41) [POST]
+  Parameters: {"commit"=>"Upload", "upload"=>{"datafile"=>#<File:C:/DOCUME~1/SHREYA~1/LOCALS~1/Temp/RackMultipart20110321-3248-knq1rz-0>}}
+Completed in 7734ms (View: 0, DB: 0) | 200 OK [http://localhost/upload/uploadFile]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#uploadFile (for 127.0.0.1 at 2011-03-21 23:57:29) [POST]
+  Parameters: {"commit"=>"Upload", "upload"=>{"datafile"=>#<File:C:/DOCUME~1/SHREYA~1/LOCALS~1/Temp/RackMultipart20110321-3248-1qjkn0n-0>}}
+
+SyntaxError (E:/converter/app/controllers/upload_controller.rb:26: syntax error, unexpected kEND):
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  /script\server:3
+  C:/Ruby187/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.1.10/lib/ruby-debug.rb:90:in `debug_load'
+  C:/Ruby187/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.1.10/lib/ruby-debug.rb:90:in `main'
+  C:/Ruby187/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.1.10/bin/rdebug-ide:74
+  C:/Ruby187/bin/rdebug-ide:19:in `load'
+  C:/Ruby187/bin/rdebug-ide:19
+
+Rendered rescues/_trace (93.8ms)
+Rendered rescues/_request_and_response (15.6ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UploadController#uploadFile (for 127.0.0.1 at 2011-03-21 23:57:43) [POST]
+  Parameters: {"commit"=>"Upload", "upload"=>{"datafile"=>#<File:C:/DOCUME~1/SHREYA~1/LOCALS~1/Temp/RackMultipart20110321-3248-1tg417g-0>}}
+Completed in 247330ms (View: 0, DB: 0) | 200 OK [http://localhost/upload/uploadFile]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UploadController#uploadFile (for 127.0.0.1 at 2011-03-22 00:02:37) [POST]
+  Parameters: {"commit"=>"Upload", "upload"=>{"datafile"=>#<File:C:/DOCUME~1/SHREYA~1/LOCALS~1/Temp/RackMultipart20110322-3808-yndldl-0>}}
+Completed in 1406ms (View: 31, DB: 0) | 200 OK [http://localhost/upload/uploadFile]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UploadController#uploadFile (for 127.0.0.1 at 2011-03-22 00:02:44) [POST]
+  Parameters: {"commit"=>"Upload", "upload"=>{"datafile"=>#<File:C:/DOCUME~1/SHREYA~1/LOCALS~1/Temp/RackMultipart20110322-3808-bbh4ml-0>}}
+Completed in 31ms (View: 0, DB: 0) | 200 OK [http://localhost/upload/uploadFile]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UploadController#uploadFile (for 127.0.0.1 at 2011-03-22 00:02:48) [POST]
+  Parameters: {"commit"=>"Upload", "upload"=>{"datafile"=>#<File:C:/DOCUME~1/SHREYA~1/LOCALS~1/Temp/RackMultipart20110322-3808-hlsm4-0>}}
+Completed in 29750ms (View: 0, DB: 0) | 200 OK [http://localhost/upload/uploadFile]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UploadController#uploadFile (for 127.0.0.1 at 2011-03-22 00:04:33) [POST]
+  Parameters: {"commit"=>"Upload", "upload"=>{"datafile"=>#<File:C:/DOCUME~1/SHREYA~1/LOCALS~1/Temp/RackMultipart20110322-3808-gcfx6k-0>}}
+Completed in 31422ms (View: 0, DB: 0) | 200 OK [http://localhost/upload/uploadFile]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UploadController#uploadFile (for 127.0.0.1 at 2011-03-22 00:07:09) [POST]
+  Parameters: {"commit"=>"Upload", "upload"=>{"datafile"=>#<File:C:/DOCUME~1/SHREYA~1/LOCALS~1/Temp/RackMultipart20110322-3808-va9u8z-0>}}
+Completed in 2359ms (View: 0, DB: 0) | 200 OK [http://localhost/upload/uploadFile]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UploadController#uploadFile (for 127.0.0.1 at 2011-03-22 00:07:22) [POST]
+  Parameters: {"commit"=>"Upload", "upload"=>{"datafile"=>#<File:C:/DOCUME~1/SHREYA~1/LOCALS~1/Temp/RackMultipart20110322-3808-qp4bmd-0>}}
+Completed in 7844ms (View: 0, DB: 0) | 200 OK [http://localhost/upload/uploadFile]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UploadController#uploadFile (for 127.0.0.1 at 2011-03-22 00:07:37) [POST]
+  Parameters: {"commit"=>"Upload", "upload"=>{"datafile"=>#<File:C:/DOCUME~1/SHREYA~1/LOCALS~1/Temp/RackMultipart20110322-3808-ni843-0>}}
+Completed in 2563ms (View: 0, DB: 0) | 200 OK [http://localhost/upload/uploadFile]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UploadController#uploadFile (for 127.0.0.1 at 2011-03-22 00:07:47) [POST]
+  Parameters: {"commit"=>"Upload", "upload"=>{"datafile"=>#<File:C:/DOCUME~1/SHREYA~1/LOCALS~1/Temp/RackMultipart20110322-3808-1d2mb1h-0>}}
+Completed in 1094ms (View: 16, DB: 0) | 200 OK [http://localhost/upload/uploadFile]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UploadController#uploadFile (for 127.0.0.1 at 2011-03-22 00:08:41) [POST]
+  Parameters: {"commit"=>"Upload", "upload"=>{"datafile"=>#<File:C:/DOCUME~1/SHREYA~1/LOCALS~1/Temp/RackMultipart20110322-3808-1lnv042-0>}}
+Completed in 28766ms (View: 0, DB: 0) | 200 OK [http://localhost/upload/uploadFile]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UploadController#uploadFile (for 127.0.0.1 at 2011-03-22 00:11:04) [POST]
+  Parameters: {"commit"=>"Upload", "upload"=>{"datafile"=>#<File:C:/DOCUME~1/SHREYA~1/LOCALS~1/Temp/RackMultipart20110322-3808-6gp2jg-0>}}
+Completed in 8859ms (View: 16, DB: 0) | 200 OK [http://localhost/upload/uploadFile]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UploadController#uploadFile (for 127.0.0.1 at 2011-03-22 00:12:00) [POST]
+  Parameters: {"commit"=>"Upload", "upload"=>{"datafile"=>#<File:C:/DOCUME~1/SHREYA~1/LOCALS~1/Temp/RackMultipart20110322-3808-1boav4y-0>}}
+Completed in 1094ms (View: 0, DB: 0) | 200 OK [http://localhost/upload/uploadFile]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UploadController#uploadFile (for 127.0.0.1 at 2011-03-22 00:12:38) [POST]
+  Parameters: {"commit"=>"Upload", "upload"=>{"datafile"=>#<File:C:/DOCUME~1/SHREYA~1/LOCALS~1/Temp/RackMultipart20110322-3808-v7x7g0-0>}}
+Completed in 1938ms (View: 0, DB: 0) | 200 OK [http://localhost/upload/uploadFile]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UploadController#uploadFile (for 127.0.0.1 at 2011-03-22 00:14:19) [POST]
+  Parameters: {"commit"=>"Upload", "upload"=>{"datafile"=>#<File:C:/DOCUME~1/SHREYA~1/LOCALS~1/Temp/RackMultipart20110322-3808-eh6hx8-0>}}
+Completed in 1219ms (View: 0, DB: 0) | 200 OK [http://localhost/upload/uploadFile]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UploadController#uploadFile (for 127.0.0.1 at 2011-03-22 00:14:34) [POST]
+  Parameters: {"commit"=>"Upload", "upload"=>{"datafile"=>#<File:C:/DOCUME~1/SHREYA~1/LOCALS~1/Temp/RackMultipart20110322-3808-1crk27y-0>}}
+Completed in 9188ms (View: 0, DB: 0) | 200 OK [http://localhost/upload/uploadFile]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UploadController#uploadFile (for 127.0.0.1 at 2011-03-22 00:16:37) [POST]
+  Parameters: {"commit"=>"Upload", "upload"=>{"datafile"=>#<File:C:/DOCUME~1/SHREYA~1/LOCALS~1/Temp/RackMultipart20110322-3808-1fpqk0r-0>}}
+
+TypeError (can't convert Tempfile into String):
+  app/controllers/upload_controller.rb:12:in `extname'
+  app/controllers/upload_controller.rb:12:in `uploadFile'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  /script\server:3
+  C:/Ruby187/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.1.10/lib/ruby-debug.rb:90:in `debug_load'
+  C:/Ruby187/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.1.10/lib/ruby-debug.rb:90:in `main'
+  C:/Ruby187/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.1.10/bin/rdebug-ide:74
+  C:/Ruby187/bin/rdebug-ide:19:in `load'
+  C:/Ruby187/bin/rdebug-ide:19
+
+Rendered rescues/_trace (93.8ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UploadController#uploadFile (for 127.0.0.1 at 2011-03-22 00:17:15) [POST]
+  Parameters: {"commit"=>"Upload", "upload"=>{"datafile"=>#<File:C:/DOCUME~1/SHREYA~1/LOCALS~1/Temp/RackMultipart20110322-3808-j16xuo-0>}}
+
+ActionView::MissingTemplate (Missing template upload/uploadFile.erb in view path app/views):
+  app/controllers/upload_controller.rb:13:in `uploadFile'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  /script\server:3
+  C:/Ruby187/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.1.10/lib/ruby-debug.rb:90:in `debug_load'
+  C:/Ruby187/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.1.10/lib/ruby-debug.rb:90:in `main'
+  C:/Ruby187/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.1.10/bin/rdebug-ide:74
+  C:/Ruby187/bin/rdebug-ide:19:in `load'
+  C:/Ruby187/bin/rdebug-ide:19
+
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UploadController#uploadFile (for 127.0.0.1 at 2011-03-22 00:17:51) [POST]
+  Parameters: {"commit"=>"Upload", "upload"=>{"datafile"=>#<File:C:/DOCUME~1/SHREYA~1/LOCALS~1/Temp/RackMultipart20110322-3808-10vgboz-0>}}
+Redirected to http://localhost:3000/upload/uploadFile?url=http%3A%2F%2Flocalhost%3A3000%2Fpublic%2Fdata%2FInvestmentProjectReviewTemplate.html
+Completed in 7063ms (DB: 0) | 302 Found [http://localhost/upload/uploadFile]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UploadController#uploadFile (for 127.0.0.1 at 2011-03-22 00:17:59) [GET]
+  Parameters: {"url"=>"http://localhost:3000/public/data/InvestmentProjectReviewTemplate.html"}
+
+NoMethodError (You have a nil object when you didn't expect it!
+You might have expected an instance of ActiveRecord::Base.
+The error occurred while evaluating nil.[]):
+  app/controllers/upload_controller.rb:18:in `save_file'
+  app/controllers/upload_controller.rb:10:in `uploadFile'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  /script\server:3
+  C:/Ruby187/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.1.10/lib/ruby-debug.rb:90:in `debug_load'
+  C:/Ruby187/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.1.10/lib/ruby-debug.rb:90:in `main'
+  C:/Ruby187/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.1.10/bin/rdebug-ide:74
+  C:/Ruby187/bin/rdebug-ide:19:in `load'
+  C:/Ruby187/bin/rdebug-ide:19
+
+Rendered rescues/_trace (93.8ms)
+Rendered rescues/_request_and_response (15.6ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UploadController#upload (for 127.0.0.1 at 2011-03-22 00:22:00) [GET]
+Rendering upload/upload
+Completed in 31ms (View: 31, DB: 0) | 200 OK [http://localhost/upload/upload]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UploadController#uploadFile (for 127.0.0.1 at 2011-03-22 00:22:05) [POST]
+  Parameters: {"commit"=>"Upload", "upload"=>{"datafile"=>#<File:C:/DOCUME~1/SHREYA~1/LOCALS~1/Temp/RackMultipart20110322-3808-1vnoaw5-0>}}
+Redirected to http://localhost:3000/public/data/InvestmentProjectReviewTemplate.html
+Completed in 8391ms (DB: 0) | 302 Found [http://localhost/upload/uploadFile]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-03-22 00:22:14) [GET]
+
+ActionController::RoutingError (No route matches "/public/data/InvestmentProjectReviewTemplate.html" with {:method=>:get}):
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  /script\server:3
+  C:/Ruby187/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.1.10/lib/ruby-debug.rb:90:in `debug_load'
+  C:/Ruby187/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.1.10/lib/ruby-debug.rb:90:in `main'
+  C:/Ruby187/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.1.10/bin/rdebug-ide:74
+  C:/Ruby187/bin/rdebug-ide:19:in `load'
+  C:/Ruby187/bin/rdebug-ide:19
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-03-22 00:22:42) [GET]
+
+ActionController::RoutingError (No route matches "/public/javascripts/application.js" with {:method=>:get}):
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  /script\server:3
+  C:/Ruby187/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.1.10/lib/ruby-debug.rb:90:in `debug_load'
+  C:/Ruby187/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.1.10/lib/ruby-debug.rb:90:in `main'
+  C:/Ruby187/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.1.10/bin/rdebug-ide:74
+  C:/Ruby187/bin/rdebug-ide:19:in `load'
+  C:/Ruby187/bin/rdebug-ide:19
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-03-22 00:23:39) [GET]
+
+ActionController::RoutingError (No route matches "/public/javascript/application.js" with {:method=>:get}):
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  /script\server:3
+  C:/Ruby187/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.1.10/lib/ruby-debug.rb:90:in `debug_load'
+  C:/Ruby187/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.1.10/lib/ruby-debug.rb:90:in `main'
+  C:/Ruby187/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.1.10/bin/rdebug-ide:74
+  C:/Ruby187/bin/rdebug-ide:19:in `load'
+  C:/Ruby187/bin/rdebug-ide:19
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-03-22 00:23:45) [GET]
+
+ActionController::RoutingError (No route matches "/javascript/application.js" with {:method=>:get}):
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  /script\server:3
+  C:/Ruby187/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.1.10/lib/ruby-debug.rb:90:in `debug_load'
+  C:/Ruby187/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.1.10/lib/ruby-debug.rb:90:in `main'
+  C:/Ruby187/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.1.10/bin/rdebug-ide:74
+  C:/Ruby187/bin/rdebug-ide:19:in `load'
+  C:/Ruby187/bin/rdebug-ide:19
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-03-22 00:23:48) [GET]
+
+ActionController::RoutingError (No route matches "/javascriptd/application.js" with {:method=>:get}):
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  /script\server:3
+  C:/Ruby187/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.1.10/lib/ruby-debug.rb:90:in `debug_load'
+  C:/Ruby187/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.1.10/lib/ruby-debug.rb:90:in `main'
+  C:/Ruby187/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.1.10/bin/rdebug-ide:74
+  C:/Ruby187/bin/rdebug-ide:19:in `load'
+  C:/Ruby187/bin/rdebug-ide:19
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-03-22 00:24:42) [GET]
+
+ActionController::RoutingError (No route matches "/session/new" with {:method=>:get}):
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  /script\server:3
+  C:/Ruby187/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.1.10/lib/ruby-debug.rb:90:in `debug_load'
+  C:/Ruby187/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.1.10/lib/ruby-debug.rb:90:in `main'
+  C:/Ruby187/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.1.10/bin/rdebug-ide:74
+  C:/Ruby187/bin/rdebug-ide:19:in `load'
+  C:/Ruby187/bin/rdebug-ide:19
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UploadController#upload (for 127.0.0.1 at 2011-03-22 00:24:47) [GET]
+Rendering upload/upload
+Completed in 0ms (View: 0, DB: 0) | 200 OK [http://localhost/upload/upload]
+  [4;36;1mSQL (15.6ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UploadController#uploadFile (for 127.0.0.1 at 2011-03-22 00:24:53) [POST]
+  Parameters: {"commit"=>"Upload", "upload"=>{"datafile"=>#<File:C:/DOCUME~1/SHREYA~1/LOCALS~1/Temp/RackMultipart20110322-3808-mscur3-0>}}
+Redirected to http://localhost:3000/data/Shreyas_Agarwal.html
+Completed in 1219ms (DB: 16) | 302 Found [http://localhost/upload/uploadFile]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UploadController#uploadFile (for 127.0.0.1 at 2011-03-22 00:25:11) [POST]
+  Parameters: {"commit"=>"Upload", "upload"=>{"datafile"=>#<File:C:/DOCUME~1/SHREYA~1/LOCALS~1/Temp/RackMultipart20110322-3808-191s0da-0>}}
+Redirected to http://localhost:3000/data/code_review_project_name_dd_mm_yy.html
+Completed in 4750ms (DB: 0) | 302 Found [http://localhost/upload/uploadFile]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UploadController#uploadFile (for 127.0.0.1 at 2011-03-22 09:16:15) [POST]
+  Parameters: {"commit"=>"Upload", "upload"=>{"datafile"=>#<File:C:/DOCUME~1/SHREYA~1/LOCALS~1/Temp/RackMultipart20110322-3808-5kp9jx-0>}}
+Redirected to http://localhost:3000/data/InvestmentProjectReviewTemplate.html
+Completed in 9906ms (DB: 0) | 302 Found [http://localhost/upload/uploadFile]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UploadController#uploadFile (for 127.0.0.1 at 2011-03-22 09:58:32) [POST]
+  Parameters: {"commit"=>"Upload", "upload"=>{"datafile"=>#<File:C:/DOCUME~1/SHREYA~1/LOCALS~1/Temp/RackMultipart20110322-3808-1n496ol-0>}}
+Redirected to http://localhost:3000/data/Shreyas_Agarwal.html
+Completed in 5297ms (DB: 0) | 302 Found [http://localhost/upload/uploadFile]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UploadController#uploadFile (for 127.0.0.1 at 2011-03-22 09:58:52) [POST]
+  Parameters: {"commit"=>"Upload", "upload"=>{"datafile"=>#<File:C:/DOCUME~1/SHREYA~1/LOCALS~1/Temp/RackMultipart20110322-3808-1aokhl0-0>}}
+Redirected to http://localhost:3000/data/InvestmentProjectReviewTemplate.html
+Completed in 7422ms (DB: 0) | 302 Found [http://localhost/upload/uploadFile]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UploadController#uploadFile (for 127.0.0.1 at 2011-03-22 09:59:26) [POST]
+  Parameters: {"commit"=>"Upload", "upload"=>{"datafile"=>#<File:C:/DOCUME~1/SHREYA~1/LOCALS~1/Temp/RackMultipart20110322-3808-1rwh3db-0>}}
+Redirected to http://localhost:3000/data/InvestmentProjectReviewTemplate.swf
+Completed in 21078ms (DB: 0) | 302 Found [http://localhost/upload/uploadFile]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UploadController#uploadFile (for 127.0.0.1 at 2011-03-22 10:21:59) [POST]
+  Parameters: {"commit"=>"Upload", "upload"=>{"datafile"=>#<File:C:/DOCUME~1/SHREYA~1/LOCALS~1/Temp/RackMultipart20110322-3808-fuoesl-0>}}
+Redirected to http://localhost:3000/data/InvestmentProjectReviewTemplate.html
+Completed in 12703ms (DB: 0) | 302 Found [http://localhost/upload/uploadFile]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UploadController#uploadFile (for 127.0.0.1 at 2011-03-22 10:25:03) [POST]
+  Parameters: {"commit"=>"Upload", "upload"=>{"datafile"=>#<File:C:/DOCUME~1/SHREYA~1/LOCALS~1/Temp/RackMultipart20110322-3808-101ru8s-0>}}
+Redirected to http://localhost:3000/data/code_review_project_name_dd_mm_yy.html
+Completed in 2250ms (DB: 0) | 302 Found [http://localhost/upload/uploadFile]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-03-22 10:46:42) [GET]
+
+ActionController::RoutingError (No route matches "/icall/14201103152524.ics" with {:method=>:get}):
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  /script\server:3
+  C:/Ruby187/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.1.10/lib/ruby-debug.rb:90:in `debug_load'
+  C:/Ruby187/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.1.10/lib/ruby-debug.rb:90:in `main'
+  C:/Ruby187/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.1.10/bin/rdebug-ide:74
+  C:/Ruby187/bin/rdebug-ide:19:in `load'
+  C:/Ruby187/bin/rdebug-ide:19
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 10.11.58.35 at 2011-03-22 10:46:52) [GET]
+
+ActionController::RoutingError (No route matches "/icall/15201103164551.ics" with {:method=>:get}):
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  /script\server:3
+  C:/Ruby187/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.1.10/lib/ruby-debug.rb:90:in `debug_load'
+  C:/Ruby187/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.1.10/lib/ruby-debug.rb:90:in `main'
+  C:/Ruby187/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.1.10/bin/rdebug-ide:74
+  C:/Ruby187/bin/rdebug-ide:19:in `load'
+  C:/Ruby187/bin/rdebug-ide:19
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UploadController#upload (for 127.0.0.1 at 2011-03-22 10:55:36) [GET]
+Rendering upload/upload
+Completed in 0ms (View: 0, DB: 0) | 200 OK [http://localhost/upload/upload]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UploadController#uploadFile (for 127.0.0.1 at 2011-03-22 10:55:41) [POST]
+  Parameters: {"commit"=>"Upload", "upload"=>{"datafile"=>#<File:C:/DOCUME~1/SHREYA~1/LOCALS~1/Temp/RackMultipart20110322-3808-hxj37l-0>}}
+Redirected to http://localhost:3000/data/InvestmentProjectReviewTemplate.html
+Completed in 9328ms (DB: 0) | 302 Found [http://localhost/upload/uploadFile]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UploadController#uploadFile (for 127.0.0.1 at 2011-03-22 10:56:09) [POST]
+  Parameters: {"commit"=>"Upload", "upload"=>{"datafile"=>#<File:C:/DOCUME~1/SHREYA~1/LOCALS~1/Temp/RackMultipart20110322-3808-2ly7wd-0>}}
+Redirected to http://localhost:3000/data/code_review_project_name_dd_mm_yy.html
+Completed in 3500ms (DB: 0) | 302 Found [http://localhost/upload/uploadFile]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UploadController#uploadFile (for 127.0.0.1 at 2011-03-22 10:56:49) [POST]
+  Parameters: {"commit"=>"Upload", "upload"=>{"datafile"=>#<File:C:/DOCUME~1/SHREYA~1/LOCALS~1/Temp/RackMultipart20110322-3808-t96c86-0>}}
+Redirected to http://localhost:3000/data/Shreyas_Agarwal.html
+Completed in 2031ms (DB: 0) | 302 Found [http://localhost/upload/uploadFile]
+  [4;36;1mSQL (15.6ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UploadController#uploadFile (for 127.0.0.1 at 2011-03-22 11:01:07) [POST]
+  Parameters: {"commit"=>"Upload", "upload"=>{"datafile"=>#<File:C:/DOCUME~1/SHREYA~1/LOCALS~1/Temp/RackMultipart20110322-3808-xw3a22-0>}}
+Redirected to http://localhost:3000/data/Shreyas_Agarwal.pdf
+Completed in 2469ms (DB: 16) | 302 Found [http://localhost/upload/uploadFile]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 10.11.58.35 at 2011-03-22 11:06:39) [GET]
+
+ActionController::RoutingError (No route matches "/icall/15201103164551.ics" with {:method=>:get}):
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  /script\server:3
+  C:/Ruby187/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.1.10/lib/ruby-debug.rb:90:in `debug_load'
+  C:/Ruby187/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.1.10/lib/ruby-debug.rb:90:in `main'
+  C:/Ruby187/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.1.10/bin/rdebug-ide:74
+  C:/Ruby187/bin/rdebug-ide:19:in `load'
+  C:/Ruby187/bin/rdebug-ide:19
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 10.11.58.35 at 2011-03-22 11:16:52) [GET]
+
+ActionController::RoutingError (No route matches "/icall/15201103164551.ics" with {:method=>:get}):
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  /script\server:3
+  C:/Ruby187/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.1.10/lib/ruby-debug.rb:90:in `debug_load'
+  C:/Ruby187/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.1.10/lib/ruby-debug.rb:90:in `main'
+  C:/Ruby187/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.1.10/bin/rdebug-ide:74
+  C:/Ruby187/bin/rdebug-ide:19:in `load'
+  C:/Ruby187/bin/rdebug-ide:19
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-03-22 11:16:55) [GET]
+
+ActionController::RoutingError (No route matches "/icall/14201103152524.ics" with {:method=>:get}):
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  /script\server:3
+  C:/Ruby187/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.1.10/lib/ruby-debug.rb:90:in `debug_load'
+  C:/Ruby187/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.1.10/lib/ruby-debug.rb:90:in `main'
+  C:/Ruby187/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.1.10/bin/rdebug-ide:74
+  C:/Ruby187/bin/rdebug-ide:19:in `load'
+  C:/Ruby187/bin/rdebug-ide:19
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 10.11.58.35 at 2011-03-22 11:46:52) [GET]
+
+ActionController::RoutingError (No route matches "/icall/15201103164551.ics" with {:method=>:get}):
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  /script\server:3
+  C:/Ruby187/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.1.10/lib/ruby-debug.rb:90:in `debug_load'
+  C:/Ruby187/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.1.10/lib/ruby-debug.rb:90:in `main'
+  C:/Ruby187/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.1.10/bin/rdebug-ide:74
+  C:/Ruby187/bin/rdebug-ide:19:in `load'
+  C:/Ruby187/bin/rdebug-ide:19
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-03-22 11:47:02) [GET]
+
+ActionController::RoutingError (No route matches "/icall/14201103152524.ics" with {:method=>:get}):
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  /script\server:3
+  C:/Ruby187/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.1.10/lib/ruby-debug.rb:90:in `debug_load'
+  C:/Ruby187/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.1.10/lib/ruby-debug.rb:90:in `main'
+  C:/Ruby187/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.1.10/bin/rdebug-ide:74
+  C:/Ruby187/bin/rdebug-ide:19:in `load'
+  C:/Ruby187/bin/rdebug-ide:19
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 10.11.58.35 at 2011-03-22 12:16:53) [GET]
+
+ActionController::RoutingError (No route matches "/icall/15201103164551.ics" with {:method=>:get}):
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  /script\server:3
+  C:/Ruby187/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.1.10/lib/ruby-debug.rb:90:in `debug_load'
+  C:/Ruby187/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.1.10/lib/ruby-debug.rb:90:in `main'
+  C:/Ruby187/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.1.10/bin/rdebug-ide:74
+  C:/Ruby187/bin/rdebug-ide:19:in `load'
+  C:/Ruby187/bin/rdebug-ide:19
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-03-22 12:17:03) [GET]
+
+ActionController::RoutingError (No route matches "/icall/14201103152524.ics" with {:method=>:get}):
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  /script\server:3
+  C:/Ruby187/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.1.10/lib/ruby-debug.rb:90:in `debug_load'
+  C:/Ruby187/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.1.10/lib/ruby-debug.rb:90:in `main'
+  C:/Ruby187/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.1.10/bin/rdebug-ide:74
+  C:/Ruby187/bin/rdebug-ide:19:in `load'
+  C:/Ruby187/bin/rdebug-ide:19
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 10.11.58.35 at 2011-03-22 12:46:53) [GET]
+
+ActionController::RoutingError (No route matches "/icall/15201103164551.ics" with {:method=>:get}):
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  /script\server:3
+  C:/Ruby187/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.1.10/lib/ruby-debug.rb:90:in `debug_load'
+  C:/Ruby187/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.1.10/lib/ruby-debug.rb:90:in `main'
+  C:/Ruby187/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.1.10/bin/rdebug-ide:74
+  C:/Ruby187/bin/rdebug-ide:19:in `load'
+  C:/Ruby187/bin/rdebug-ide:19
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-03-22 12:47:19) [GET]
+
+ActionController::RoutingError (No route matches "/icall/14201103152524.ics" with {:method=>:get}):
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  /script\server:3
+  C:/Ruby187/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.1.10/lib/ruby-debug.rb:90:in `debug_load'
+  C:/Ruby187/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.1.10/lib/ruby-debug.rb:90:in `main'
+  C:/Ruby187/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.1.10/bin/rdebug-ide:74
+  C:/Ruby187/bin/rdebug-ide:19:in `load'
+  C:/Ruby187/bin/rdebug-ide:19
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 10.11.58.35 at 2011-03-22 13:16:53) [GET]
+
+ActionController::RoutingError (No route matches "/icall/15201103164551.ics" with {:method=>:get}):
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  /script\server:3
+  C:/Ruby187/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.1.10/lib/ruby-debug.rb:90:in `debug_load'
+  C:/Ruby187/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.1.10/lib/ruby-debug.rb:90:in `main'
+  C:/Ruby187/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.1.10/bin/rdebug-ide:74
+  C:/Ruby187/bin/rdebug-ide:19:in `load'
+  C:/Ruby187/bin/rdebug-ide:19
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-03-22 13:17:19) [GET]
+
+ActionController::RoutingError (No route matches "/icall/14201103152524.ics" with {:method=>:get}):
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  /script\server:3
+  C:/Ruby187/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.1.10/lib/ruby-debug.rb:90:in `debug_load'
+  C:/Ruby187/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.1.10/lib/ruby-debug.rb:90:in `main'
+  C:/Ruby187/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.1.10/bin/rdebug-ide:74
+  C:/Ruby187/bin/rdebug-ide:19:in `load'
+  C:/Ruby187/bin/rdebug-ide:19
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 10.11.58.35 at 2011-03-22 13:46:53) [GET]
+
+ActionController::RoutingError (No route matches "/icall/15201103164551.ics" with {:method=>:get}):
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  /script\server:3
+  C:/Ruby187/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.1.10/lib/ruby-debug.rb:90:in `debug_load'
+  C:/Ruby187/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.1.10/lib/ruby-debug.rb:90:in `main'
+  C:/Ruby187/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.1.10/bin/rdebug-ide:74
+  C:/Ruby187/bin/rdebug-ide:19:in `load'
+  C:/Ruby187/bin/rdebug-ide:19
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-03-22 13:47:30) [GET]
+
+ActionController::RoutingError (No route matches "/icall/14201103152524.ics" with {:method=>:get}):
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  /script\server:3
+  C:/Ruby187/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.1.10/lib/ruby-debug.rb:90:in `debug_load'
+  C:/Ruby187/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.1.10/lib/ruby-debug.rb:90:in `main'
+  C:/Ruby187/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.1.10/bin/rdebug-ide:74
+  C:/Ruby187/bin/rdebug-ide:19:in `load'
+  C:/Ruby187/bin/rdebug-ide:19
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 10.11.58.35 at 2011-03-22 14:16:54) [GET]
+
+ActionController::RoutingError (No route matches "/icall/15201103164551.ics" with {:method=>:get}):
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  /script\server:3
+  C:/Ruby187/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.1.10/lib/ruby-debug.rb:90:in `debug_load'
+  C:/Ruby187/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.1.10/lib/ruby-debug.rb:90:in `main'
+  C:/Ruby187/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.1.10/bin/rdebug-ide:74
+  C:/Ruby187/bin/rdebug-ide:19:in `load'
+  C:/Ruby187/bin/rdebug-ide:19
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-03-22 14:17:46) [GET]
+
+ActionController::RoutingError (No route matches "/icall/14201103152524.ics" with {:method=>:get}):
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  /script\server:3
+  C:/Ruby187/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.1.10/lib/ruby-debug.rb:90:in `debug_load'
+  C:/Ruby187/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.1.10/lib/ruby-debug.rb:90:in `main'
+  C:/Ruby187/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.1.10/bin/rdebug-ide:74
+  C:/Ruby187/bin/rdebug-ide:19:in `load'
+  C:/Ruby187/bin/rdebug-ide:19
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 10.11.58.35 at 2011-03-22 14:45:54) [GET]
+
+ActionController::RoutingError (No route matches "/icall/15201103164551.ics" with {:method=>:get}):
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  /script\server:3
+  C:/Ruby187/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.1.10/lib/ruby-debug.rb:90:in `debug_load'
+  C:/Ruby187/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.1.10/lib/ruby-debug.rb:90:in `main'
+  C:/Ruby187/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.1.10/bin/rdebug-ide:74
+  C:/Ruby187/bin/rdebug-ide:19:in `load'
+  C:/Ruby187/bin/rdebug-ide:19
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-03-22 14:47:57) [GET]
+
+ActionController::RoutingError (No route matches "/icall/14201103152524.ics" with {:method=>:get}):
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  /script\server:3
+  C:/Ruby187/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.1.10/lib/ruby-debug.rb:90:in `debug_load'
+  C:/Ruby187/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.1.10/lib/ruby-debug.rb:90:in `main'
+  C:/Ruby187/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.1.10/bin/rdebug-ide:74
+  C:/Ruby187/bin/rdebug-ide:19:in `load'
+  C:/Ruby187/bin/rdebug-ide:19
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 10.11.58.35 at 2011-03-22 15:15:55) [GET]
+
+ActionController::RoutingError (No route matches "/icall/15201103164551.ics" with {:method=>:get}):
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  /script\server:3
+  C:/Ruby187/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.1.10/lib/ruby-debug.rb:90:in `debug_load'
+  C:/Ruby187/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.1.10/lib/ruby-debug.rb:90:in `main'
+  C:/Ruby187/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.1.10/bin/rdebug-ide:74
+  C:/Ruby187/bin/rdebug-ide:19:in `load'
+  C:/Ruby187/bin/rdebug-ide:19
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-03-22 15:18:05) [GET]
+
+ActionController::RoutingError (No route matches "/icall/14201103152524.ics" with {:method=>:get}):
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  /script\server:3
+  C:/Ruby187/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.1.10/lib/ruby-debug.rb:90:in `debug_load'
+  C:/Ruby187/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.1.10/lib/ruby-debug.rb:90:in `main'
+  C:/Ruby187/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.1.10/bin/rdebug-ide:74
+  C:/Ruby187/bin/rdebug-ide:19:in `load'
+  C:/Ruby187/bin/rdebug-ide:19
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 10.11.58.35 at 2011-03-22 15:45:55) [GET]
+
+ActionController::RoutingError (No route matches "/icall/15201103164551.ics" with {:method=>:get}):
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  /script\server:3
+  C:/Ruby187/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.1.10/lib/ruby-debug.rb:90:in `debug_load'
+  C:/Ruby187/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.1.10/lib/ruby-debug.rb:90:in `main'
+  C:/Ruby187/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.1.10/bin/rdebug-ide:74
+  C:/Ruby187/bin/rdebug-ide:19:in `load'
+  C:/Ruby187/bin/rdebug-ide:19
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-03-22 15:48:24) [GET]
+
+ActionController::RoutingError (No route matches "/icall/14201103152524.ics" with {:method=>:get}):
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  /script\server:3
+  C:/Ruby187/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.1.10/lib/ruby-debug.rb:90:in `debug_load'
+  C:/Ruby187/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.1.10/lib/ruby-debug.rb:90:in `main'
+  C:/Ruby187/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.1.10/bin/rdebug-ide:74
+  C:/Ruby187/bin/rdebug-ide:19:in `load'
+  C:/Ruby187/bin/rdebug-ide:19
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 10.11.58.35 at 2011-03-22 16:15:56) [GET]
+
+ActionController::RoutingError (No route matches "/icall/15201103164551.ics" with {:method=>:get}):
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  /script\server:3
+  C:/Ruby187/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.1.10/lib/ruby-debug.rb:90:in `debug_load'
+  C:/Ruby187/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.1.10/lib/ruby-debug.rb:90:in `main'
+  C:/Ruby187/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.1.10/bin/rdebug-ide:74
+  C:/Ruby187/bin/rdebug-ide:19:in `load'
+  C:/Ruby187/bin/rdebug-ide:19
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-03-22 16:18:28) [GET]
+
+ActionController::RoutingError (No route matches "/icall/14201103152524.ics" with {:method=>:get}):
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  /script\server:3
+  C:/Ruby187/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.1.10/lib/ruby-debug.rb:90:in `debug_load'
+  C:/Ruby187/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.1.10/lib/ruby-debug.rb:90:in `main'
+  C:/Ruby187/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.1.10/bin/rdebug-ide:74
+  C:/Ruby187/bin/rdebug-ide:19:in `load'
+  C:/Ruby187/bin/rdebug-ide:19
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 10.11.58.35 at 2011-03-22 16:45:56) [GET]
+
+ActionController::RoutingError (No route matches "/icall/15201103164551.ics" with {:method=>:get}):
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  /script\server:3
+  C:/Ruby187/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.1.10/lib/ruby-debug.rb:90:in `debug_load'
+  C:/Ruby187/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.1.10/lib/ruby-debug.rb:90:in `main'
+  C:/Ruby187/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.1.10/bin/rdebug-ide:74
+  C:/Ruby187/bin/rdebug-ide:19:in `load'
+  C:/Ruby187/bin/rdebug-ide:19
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-03-22 16:48:30) [GET]
+
+ActionController::RoutingError (No route matches "/icall/14201103152524.ics" with {:method=>:get}):
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  /script\server:3
+  C:/Ruby187/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.1.10/lib/ruby-debug.rb:90:in `debug_load'
+  C:/Ruby187/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.1.10/lib/ruby-debug.rb:90:in `main'
+  C:/Ruby187/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.1.10/bin/rdebug-ide:74
+  C:/Ruby187/bin/rdebug-ide:19:in `load'
+  C:/Ruby187/bin/rdebug-ide:19
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 10.11.58.35 at 2011-03-22 17:15:56) [GET]
+
+ActionController::RoutingError (No route matches "/icall/15201103164551.ics" with {:method=>:get}):
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  /script\server:3
+  C:/Ruby187/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.1.10/lib/ruby-debug.rb:90:in `debug_load'
+  C:/Ruby187/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.1.10/lib/ruby-debug.rb:90:in `main'
+  C:/Ruby187/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.1.10/bin/rdebug-ide:74
+  C:/Ruby187/bin/rdebug-ide:19:in `load'
+  C:/Ruby187/bin/rdebug-ide:19
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-03-22 17:18:38) [GET]
+
+ActionController::RoutingError (No route matches "/icall/14201103152524.ics" with {:method=>:get}):
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  /script\server:3
+  C:/Ruby187/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.1.10/lib/ruby-debug.rb:90:in `debug_load'
+  C:/Ruby187/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.1.10/lib/ruby-debug.rb:90:in `main'
+  C:/Ruby187/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.1.10/bin/rdebug-ide:74
+  C:/Ruby187/bin/rdebug-ide:19:in `load'
+  C:/Ruby187/bin/rdebug-ide:19
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 10.11.58.35 at 2011-03-22 17:45:56) [GET]
+
+ActionController::RoutingError (No route matches "/icall/15201103164551.ics" with {:method=>:get}):
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  /script\server:3
+  C:/Ruby187/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.1.10/lib/ruby-debug.rb:90:in `debug_load'
+  C:/Ruby187/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.1.10/lib/ruby-debug.rb:90:in `main'
+  C:/Ruby187/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.1.10/bin/rdebug-ide:74
+  C:/Ruby187/bin/rdebug-ide:19:in `load'
+  C:/Ruby187/bin/rdebug-ide:19
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (15.6ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-03-22 17:48:57) [GET]
+
+ActionController::RoutingError (No route matches "/icall/14201103152524.ics" with {:method=>:get}):
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  /script\server:3
+  C:/Ruby187/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.1.10/lib/ruby-debug.rb:90:in `debug_load'
+  C:/Ruby187/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.1.10/lib/ruby-debug.rb:90:in `main'
+  C:/Ruby187/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.1.10/bin/rdebug-ide:74
+  C:/Ruby187/bin/rdebug-ide:19:in `load'
+  C:/Ruby187/bin/rdebug-ide:19
+
+Rendering rescues/layout (not_found)
